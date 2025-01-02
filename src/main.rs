@@ -5,8 +5,10 @@ use std::io;
 fn main() {
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
-    loop {
-        println!("Try guessing a number between 1 and 100.");
+    for n in 1..=10 {
+        println!("Try guessing a number between 1 and 100 in less than 10 attempts.");
+        println!("Round: {n}");
+        println!("");
         println!("Type your guess:");
 
         let mut guess = String::new();
@@ -26,6 +28,10 @@ fn main() {
                 break;
             }
             Ordering::Greater => println!("Too high!"),
+        }
+
+        if n == 10 {
+            println!("You loose! The secret number was: {secret_number}.");
         }
     }
 }
