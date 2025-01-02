@@ -17,15 +17,15 @@ fn main() {
             Ok(num) => num,
             Err(_) => continue,
         };
-        println!("Your guess is: {guess}");
+        println!("Your guess is: {guess}.");
 
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too little!"),
+            Ordering::Less => println!("Too low!"),
             Ordering::Equal => {
                 println!("Congratulations, you've guessed right!");
                 break;
             }
-            Ordering::Greater => println!("Too much!"),
+            Ordering::Greater => println!("Too high!"),
         }
     }
 }
