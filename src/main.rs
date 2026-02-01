@@ -31,7 +31,7 @@ fn main() {
         }
 
         if n == 10 {
-            println!("You loose! The secret number was: {secret_number}.");
+            println!("You lose! The secret number was: {secret_number}.");
         }
     }
 }
